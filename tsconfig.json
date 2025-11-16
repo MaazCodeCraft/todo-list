@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ES2020",
+    "outDir": "./Script",
+    "rootDir": "./Script",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["DOM", "ES2020"]
+  },
+  "include": ["Script/*.ts"],
+  "exclude": ["node_modules", "Script/*.js"]
+}

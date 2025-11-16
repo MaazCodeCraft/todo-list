@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ["Inter", "sans-serif"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.3s ease-in-out",
+              "slide-up": "slideUp 0.3s ease-out",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="font-inter bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 min-h-screen p-5"
+  >
+    <div
+      class="max-w-4xl mx-auto bg-white/95 backdrop-blur-xl rounded-3xl shadow-2xl shadow-black/10 overflow-hidden"
+    >
+      <header
+        class="bg-gradient-to-r from-indigo-600 to-purple-600 px-8 py-12 text-center text-white"
+      >
+        <h1 class="text-4xl font-bold mb-2 text-shadow-lg">Todo List</h1>
+        <p class="text-lg font-light opacity-90">
+          Stay organized and productive
+        </p>
+      </header>
+
+      <div class="p-8 bg-white border-b border-gray-100">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          <div class="flex flex-col">
+            <input
+              placeholder="What needs to be done?"
+              class="js-name-input px-5 py-4 border-2 border-gray-200 rounded-xl text-base font-medium transition-all duration-300 bg-gray-50 focus:outline-none focus:border-indigo-500 focus:bg-white focus:shadow-lg focus:shadow-indigo-500/10 focus:-translate-y-0.5 hover:border-gray-300"
+              maxlength="100"
+            />
+            <div
+              class="js-name-error text-red-500 text-sm font-medium mt-2 min-h-[20px] opacity-0 transform -translate-y-1 transition-all duration-300"
+            ></div>
+          </div>
+          <div class="flex flex-col">
+            <input
+              type="date"
+              class="js-due-date-input px-5 py-4 border-2 border-gray-200 rounded-xl text-base font-medium transition-all duration-300 bg-gray-50 focus:outline-none focus:border-indigo-500 focus:bg-white focus:shadow-lg focus:shadow-indigo-500/10 focus:-translate-y-0.5 hover:border-gray-300"
+            />
+            <div
+              class="js-date-error text-red-500 text-sm font-medium mt-2 min-h-[20px] opacity-0 transform -translate-y-1 transition-all duration-300"
+            ></div>
+          </div>
+          <button
+            class="js-add js-add-todo-button bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-6 py-4 rounded-xl font-semibold text-base transition-all duration-300 shadow-lg shadow-emerald-500/30 hover:-translate-y-1 hover:shadow-xl hover:shadow-emerald-500/40 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none"
+          >
+            <span>Add Task</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="p-8 bg-gray-50">
+        <div class="js-todo-list space-y-4"></div>
+        <div
+          class="js-empty-state text-center py-16 text-gray-500"
+          style="display: none"
+        >
+          <div class="text-6xl mb-4 opacity-50">📝</div>
+          <p class="text-lg font-medium">No tasks yet. Add one above!</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="Script/todo-list.js"></script>
+  </body>
+</html>
