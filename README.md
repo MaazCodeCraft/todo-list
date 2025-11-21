@@ -2,6 +2,20 @@
 
 A sleek, professional todo list application built with TypeScript and Tailwind CSS, featuring comprehensive validations and modern 3D design.
 
+---
+
+🔗 **Live Demo:**  
+[🌐 View Project](https://maazcodecraft.github.io/todo-list/todo-list.html)
+
+---
+
+## 📸 Screenshots
+
+Here's how the project looks in action:
+
+![Screenshot 1](project-screenshots/01.png)
+![Screenshot 2](project-screenshots/02.png)
+
 ## 🛠️ Tech Stack
 
 - **TypeScript** - Type-safe JavaScript
