@@ -16,6 +16,10 @@ Here's how the project looks in action:
 ![Screenshot 1](project-screenshots/01.png)
 ![Screenshot 2](project-screenshots/02.png)
 
+## project Demo Video
+
+[📥 Download Demo Video](project-screenshots/project-video.mp4)
+
 ## 🛠️ Tech Stack
 
 - **TypeScript** - Type-safe JavaScript
